@@ -1,15 +1,16 @@
-const link = {
-  path: 'atividade_01_css-css3-transitions', title: 'CSS Transition'
-};
+const links = [
+  {path: 'atividade_01_css-css3-transitions', title: 'CSS3 Transition'},
+]
 
-const linkAtividade = document.querySelector('#listaLinks');
-console.log(linkAtividade)
+const listAtividade = document.querySelector('#listaLinks');
+//console.log(listAtividade)
 
-linkAtividade.innerHTML += `
+links.forEach((item,index) => listAtividade.innerHTML += `
   <li>
-    <a href="/src/pages/${link.path}/index.html">
-      Atividade 01: ${link.title}
+    <a href="/src/pages/${item.path}/index.html">
+      Atividade ${index+1}: ${item.title}
     </a>
   </li>
-`;
+` )
+
 
