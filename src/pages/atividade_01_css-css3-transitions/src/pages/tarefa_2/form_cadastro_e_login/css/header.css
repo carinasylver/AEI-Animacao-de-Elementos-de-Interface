@@ -1,0 +1,87 @@
+/*mobile first*/
+
+.cabecalho {
+  background-color: #2b8a86;
+  color: #edf7f6;
+}
+
+/*cadastro e login*/
+.navegacao__menu__links_autenticacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100px;
+}
+
+.btn__cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+  color: #edf7f6;
+  cursor: pointer;
+  width: 200px;
+  height: 49px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 1s; /* Transição suave de 1s para hover/active */
+  /* border: 1px solid #ffffff; */
+}
+
+.btn__cadastro:hover {
+  background-color: #f16457;
+  border-radius: 50px;
+}
+
+.btn__cadastro:active {
+  transform: scale(1.05);
+  opacity: 1;
+  display: block;
+}
+
+.btn__login {
+  background: none;
+  color: #edf7f6;
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn__login:hover {
+  background-image: linear-gradient(to bottom right, #2b8a86, #21cdc3);
+  transition: 1s;
+  background-position: -100px;
+  background-size: 300%;
+}
+
+.btn__login:active {
+  background-image: linear-gradient(to bottom right, #21cdc3, #2b8a86);
+  background-size: 300%;
+  transition: 1s;
+  transition-delay: 1s;
+  background-position: -100px;
+}
+
+/*telas maiores*/
+@media (min-width: 800px) {
+  .cabecalho__navegacao {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navegacao__menu__links_autenticacao {
+    order: 1;
+  }
+
+  .navegacao__menu__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+}

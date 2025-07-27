@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  gap: 10px; 
+  padding: 20px;
+}
+/********** Input***** */
+.input-group {
+  position: relative;
+  margin: 10px 0;
+}
+
+
+.input-group input {  
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #808080; 
+  outline: none;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Placeholder invisível mas funcional */
+.input-group input::placeholder {
+  color: transparent;
+}
+
+/* Efeito de foco */
+.input-group input:focus {
+  border-bottom: 2px solid #1e1e1e;
+}
+
+/* Label flutuante */
+.input-group label {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  pointer-events: none;
+  text-align: center;
+  transition: 0.2s ease all;
+}
+
+
+/* Label flutua se input estiver preenchido ou em foco */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -10px; /*move o label para cima*/
+  font-size: 16px;
+  color: #333;
+}
+
+/* Adiciona ":" quando flutuar */
+.input-group input:focus + label::after,
+.input-group input:not(:placeholder-shown) + label::after {
+  content: ":";
+}
+
+
+/************ Botões ***********/
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.button-group button {
+  width: 100px;
+  height: 40px;
+  background-color: #808080;
+  border: none;
+  transition: box-shadow 1s linear, border-left 1s ease, border-right 1s ease;
+  color: black;
+  cursor: pointer;
+}
+
+.button-group button:hover {
+  box-shadow: 0px 0px 10px #1e1e1e;
+  background-color: #1e1e1e;
+  color: white;
+  border-left: 25px solid #1e1e1e;
+  border-right: 25px solid #1e1e1e;
+}
+
+.button-group button:active {
+  transform: scale(0.95);
+  font-weight: bold;
+  box-shadow: 0px 3px 10px #1e1e1e, 3px 0px 10px #808080;
+}
