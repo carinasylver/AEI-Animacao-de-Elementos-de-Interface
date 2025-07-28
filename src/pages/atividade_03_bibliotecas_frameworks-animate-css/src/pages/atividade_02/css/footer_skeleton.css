@@ -1,0 +1,51 @@
+.rodape.skeleton {
+  background-color: #f1f1ef;
+}
+
+.rodape__navegacao.skeleton,
+.rodape__projeto.skeleton,
+.rodape__links.skeleton,
+.rodape__app__link.skeleton,
+.rodape__newsletter.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: efeito 1.5s infinite;
+}
+
+.rodape__projeto.skeleton,
+.rodape__links.skeleton {
+  margin-left: 10px;
+  color: transparent;
+  width: 90%;
+  height: 100%;
+}
+
+.rodape__titulo.skeleton,
+.rodape__links__titulo.skeleton,
+.rodape__links__item.skeleton,
+.rodape__texto.skeleton,
+.rodape__newsletter__form.skeleton,
+.rodape__app__link .skeleton img {
+  opacity: 0;
+}
+
+.rodape__redes__links.skeleton i {
+  color: transparent;
+}
+
+.rodape__app__link.skeleton {
+  width: 70%;
+}
+
+.rodape__newsletter.skeleton {
+  width: 80%;
+}
+
+@keyframes efeito {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

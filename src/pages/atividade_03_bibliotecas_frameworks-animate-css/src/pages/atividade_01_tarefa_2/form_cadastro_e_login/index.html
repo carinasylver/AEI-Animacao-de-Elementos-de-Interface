@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" />
+
+  <title>Solidarize</title>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <nav class="cabecalho__navegacao">
+      <div class="navegacao__menu__links_autenticacao">
+        <a href="#abrirFormCadastro">
+          <button class="btn__cadastro">
+            Cadastre-se agora
+          </button>
+        </a>
+        <a href="#abrirFormLogin">
+          <button class="btn__login">
+            Entrar
+          </button>
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="cadastro" id="abrirFormCadastro" aria-label="login">
+
+      <div class="modal__cadastro">
+        <a href="#" class=fechar>X</a>
+        <h1 class="cadastro__titulo">Cadastre-se</h1>
+        <form class="formCadastro" id="formCadastro" action="/" method="POST" dados-formularioCadastro>
+          <fieldset class="formulario__campo">
+            <label for="nome">Nome</label>
+            <input class="formcadastro__input" name="nome" id="nome" type="name" placeholder="Insira seu nome" minlength="3" required />
+            <span class="mensagem-erro"></span>
+          </fieldset>
+          <fieldset class="formulario__campo">
+            <label for="email">Email</label>
+            <input class="formcadastro__input" name="email" id="email" type="email" placeholder="Insira seu email" minlength="4" required />
+            <span class="mensagem-erro"></span>
+          </fieldset>
+          <fieldset class="formulario__campo">
+            <label for="senha">Senha</label>
+            <input class="formcadastro__input" name="senha" id="senha" type="password" placeholder="Insira sua senha" minlength="6" required />
+            <span class="mensagem-erro"></span>
+          </fieldset>
+          <fieldset class="formulario__campo">
+            <label for="bairro">Bairro</label>
+            <select id="bairro" name="bairro" required>
+              <option value="">Selecione um Bairro</option>
+              <option value="areal">Areal</option>
+              <option value="centro">Centro</option>
+              <option value="fragata">Fragata</option>
+              <option value="laranjal">Laranjal</option>
+              <option value="guabiroba">Guabiroba</option>
+              <option value="porto">Três Vendas</option>
+            </select>
+            <span class="mensagem-erro"></span>
+          </fieldset>
+
+          <button class="formcadastro__botao" id="enviar" type="submit">
+            Continuar
+          </button>
+        </form>
+      </div>
+
+    </section>
+    <section class="login" id="abrirFormLogin" aria-label="login">
+
+      <div class="modal__login">
+        <a href="#" class=fechar>X</a>
+        <h1 class="login__titulo">Login</h1>
+        <form class="formLogin" id="formLogin" action="/" method="POST" dados-formularioLogin>
+          <fieldset class="formulario__campo"></fieldset>
+          <fieldset class="formulario__campo">
+            <label for="email">Email</label>
+            <input class="formLogin__input" name="email" id="emailLogin" type="email" placeholder="Insira seu email" minlength="4" required />
+            <span class="mensagem-erro"></span>
+          </fieldset>
+          <fieldset class="formulario__campo">
+            <label for="senha">Senha</label>
+            <input class="formLogin__input" name="senha" id="senhaLogin" type="password" placeholder="Insira sua senha" minlength="6" required />
+            <span class="mensagem-erro"></span>
+          </fieldset>
+          <button class="formLogin__botao" id="logar" type="submit">
+            Continuar
+          </button>
+        </form>
+      </div>
+
+    </section>
+  </main>
+  <!-- <script src="./js/validacoes_form.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- fonte Raleway -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" />
+  <!--icones -> https://fontawesome.com/ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- utilização do animate css via cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <title>Solidarize</title>
+</head>
+
+<body>
+  <header class="cabecalho skeleton">
+    <nav class="cabecalho__navegacao">
+
+      <div class="logo animate__animated animate__swing skeleton">
+        <h1><i class="fa-solid fa-handshake-simple"></i> Solidarize</h1>
+      </div>
+      <div class="cabecalho navegacao__menu__links_autenticacao skeleton">
+        <button popovertarget="modal__cadastro" class="btn__cadastro skeleton animate__animated animate__bounce animmate-delay-10s">
+          Cadastre-se agora
+        </button>
+        <button popovertarget="modal__login" class="btn__login skeleton">
+          Entrar
+        </button>
+      </div>
+      <ul class="navegacao__menu__links skeleton">
+        <li class="navegacao__menu__link skeleton">
+          <i class="fa-solid fa-users"></i>
+          <a href="#voluntarios">Voluntários</a>
+        </li>
+        <li class="navegacao__menu__link skeleton">
+          <i class="fa-solid fa-briefcase"></i>
+          <a href="#vagas">Vagas</a>
+        </li>
+        <li class="navegacao__menu__link skeleton">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+          <a href="#causas">Causas</a>
+        </li>
+        <li class="navegacao__menu__link skeleton">
+          <i class="fa-solid fa-earth-americas"></i>
+          <a href="./pages/oscs.html">OSCs</a>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+  <main>
+    <section class="apresentacao skeleton">
+      <div class="apresentacao__container skeleton">
+        <div class="apresentacao__card skeleton">
+          <h1 class="apresentacao__card__titulo skeleton">
+            Junte-se a nós! <span class="destaque1 skeleton">Cadastre-se</span> e
+            encontre oportunidades de
+            <span class="destaque2 skeleton">voluntariado</span>
+          </h1>
+          <button popovertarget="modal__cadastro" class="apresentacao__btn__cadastro skeleton">
+            Cadastre-se
+          </button>
+        </div>
+        <div class="apresentacao__card__imagem animate__animated animate__shakeX--suave skeleton">
+          <img class="apresentacao__imagem skeleton" src="./assets/img/volunteer.png" alt="" />
+        </div>
+
+      </div>
+    </section>
+
+    <section class="causas skeleton" id="causas" aria-label="causas">
+      <h1 class="causas__titulo skeleton">causas</h1>
+      <div class="causas__container__cards">
+        <div class="causas__card skeleton">
+          <img class="causas__img skeleton" src="./assets/img/causas/mulheres.jpg" alt="" />
+          <h2 class="causas__card__titulo skeleton">Mulheres</h2>
+        </div>
+        <div class="causas__card skeleton">
+          <img class="causas__img skeleton" src="./assets/img/causas/criancas.jpg" alt="" />
+          <h2 class="causas__card__titulo skeleton">Crianças</h2>
+        </div>
+        <div class="causas__card skeleton">
+          <img class="causas__img skeleton" src="./assets/img/causas/lgbtqi.jpeg" alt="" />
+          <h2 class="causas__card__titulo skeleton">LGBTQIA+</h2>
+        </div>
+        <div class="causas__card skeleton">
+          <img class="causas__img skeleton" src="./assets/img/causas/direitos-civis-acoes-sociais.jpg" alt="" />
+          <h2 class="causas__card__titulo skeleton">
+            Direitos civis e ações sociais
+          </h2>
+
+        </div>
+        <div class="causas__card skeleton">
+          <img class="causas__img skeleton" src="./assets/img/causas/assistencia-saude-humanitaria.jpg" alt="" />
+          <h2 class="causas__card__titulo skeleton">
+            Saúde e assistência humanitária
+          </h2>
+        </div>
+        <div class="causas__card skeleton">
+
+          <img class="causas__img skeleton" src="./assets/img/causas/combate-pobreza.jpg" alt="" />
+          <h2 class="causas__card__titulo skeleton">Combate à pobreza</h2>
+        </div>
+        <div class="causas__card skeleton">
+          <img class="causas__img skeleton" src="./assets/img/causas/senior.jpg" alt="" />
+          <h2 class="causas__card__titulo skeleton">Idosos</h2>
+        </div>
+        <div class="causas__card skeleton">
+          <img class="causas__img skeleton" src="./assets/img/causas/protecao-animal.jpg" alt="" />
+          <h2 class="causas__card__titulo skeleton">Proteção animal</h2>
+        </div>
+        <div class="causas__card skeleton">
+
+          <img class="causas__img skeleton" src="./assets/img/causas/educacao.jpg" alt="" />
+          <h2 class="causas__card__titulo skeleton">Educação</h2>
+
+        </div>
+        <div class="causas__card skeleton">
+          <img class="causas__img skeleton" src="./assets/img/causas/meio-ambiente.jpg" alt="" />
+          <h2 class="causas__card__titulo skeleton">Meio ambiente</h2>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="vagas skeleton" id="vagas" aria-label="vagas">
+      <h1 class="vagas__titulo animate__animated tituloAnimatecss__shakeY  skeleton">Vagas</h1>
+      <div class="vagas__cards">
+        <div class="vagas__card skeleton">
+
+          <div class="vagas__card__imagem skeleton">
+            <img src="./assets/img/oscs/dona-conceicao.png" alt="" />
+          </div>
+
+          <div class="vagas__card__conteudo skeleton">
+            <h2 class="vagas__card__titulo skeleton">Lorem ipsum dolor sit amet</h2>
+            <span>Lar da Criança Dona Conceição</span>
+            <a href="#" class="btn__vaga">Candidatar-se<i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="vagas__card skeleton">
+          <div class="vagas__card__imagem skeleton">
+            <img src="./assets/img/oscs/um-de-nos.png" alt="" />
+          </div>
+          <div class="vagas__card__conteudo skeleton">
+            <h2 class="vagas__card__titulo skeleton">Lorem ipsum dolor sit amet</h2>
+            <span>Coletivo Um de Nós</span>
+            <a href="#" class="btn__vaga">Candidatar-se<i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="vagas__card skeleton">
+          <div class="vagas__card__imagem skeleton">
+            <img src="./assets/img/oscs/sos-animais.jpg" alt="" />
+          </div>
+          <div class="vagas__card__conteudo skeleton">
+            <h2 class="vagas__card__titulo skeleton">Lorem ipsum dolor sit amet</h2>
+            <span>SOS Animais</span>
+            <a href="#" class="btn__vaga">Candidatar-se<i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="vagas__card skeleton">
+          <div class="vagas__card__imagem skeleton">
+            <img src="./assets/img/oscs/apadpel.jpg" alt="" />
+          </div>
+          <div class="vagas__card__conteudo skeleton">
+            <h2 class="vagas__card__titulo skeleton">Lorem ipsum dolor sit amet</h2>
+            <span>Associação de Pais de Pessoas com Síndrome de Down</span>
+            <a href="#" class="btn__vaga">Candidatar-se<i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="vagas__card skeleton">
+          <div class="vagas__card__imagem skeleton">
+            <img src="./assets/img/oscs/helio-dangola.png" alt="" />
+          </div>
+          <div class="vagas__card__conteudo skeleton">
+            <h2 class="vagas__card__titulo skeleton">Lorem ipsum dolor sit amet</h2>
+            <span>Instituto Hélio D'Angola</span>
+            <a href="#" class="btn__vaga">Candidatar-se<i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="vagas__card skeleton">
+          <div class="vagas__card__imagem skeleton">
+            <img src="./assets/img/oscs/amica.jpg" alt="" />
+          </div>
+          <div class="vagas__card__conteudo skeleton">
+            <h2 class="vagas__card__titulo skeleton">Lorem ipsum dolor sit amet</h2>
+            <span>Fundação Amigos do Caminho</span>
+            <a href="#" class="btn__vaga">Candidatar-se<i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="vagas__card skeleton">
+          <div class="vagas__card__imagem skeleton">
+            <img src="./assets/img/oscs/ong-alimentar.jpg" alt="" />
+          </div>
+          <div class="vagas__card__conteudo skeleton">
+            <h2 class="vagas__card__titulo skeleton">Lorem ipsum dolor sit amet</h2>
+            <span>ONG Alimentar</span>
+            <a href="#" class="btn__vaga">Candidatar-se<i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="vagas__card skeleton">
+          <div class="vagas__card__imagem skeleton">
+            <img src="./assets/img/oscs/lar-de-jesus.jpg" alt="" />
+        </div>
+        <div class="vagas__card__conteudo skeleton">
+          <h2 class="vagas__card__titulo skeleton">Lorem ipsum dolor sit amet</h2>
+          <span>Instituto Lar de Jesus</span>
+          <a href="#" class="btn__vaga">Candidatar-se<i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <footer class="rodape skeleton">
+    <div class="rodape__navegacao skeleton">
+      <section class="rodape__projeto skeleton">
+        <h2 class="rodape__titulo skeleton">Solidarize © 2025</h2>
+        <p class="rodape__texto skeleton">
+          Somos uma plataforma de impacto social. Ajudamos conectar
+          Voluntários a Organizações Sociais através do voluntariado.
+        </p>
+        <ul class="rodape__redes__links skeleton">
+          <a href="https://www.linkedin.com" target="_blank" rel="external">
+            <li><i class="fa-brands fa-linkedin"></i></li>
+          </a>
+          <a href="https://www.instagram.com/projeto.solidarizers/" target="_blank" rel="external">
+            <li><i class="fa-brands fa-instagram"></i></li>
+          </a>
+          <a href="https://www.tiktok.com" target="_blank" rel="external">
+            <li><i class="fa-brands fa-tiktok"></i></li>
+          </a>
+          <a href="https://www.x.com" target="_blank" rel="external">
+            <li><i class="fa-brands fa-x-twitter"></i></li>
+          </a>
+          <a href="https://www.facebook.com" target="_blank" rel="external">
+            <li><i class="fa-brands fa-facebook"></i></li>
+          </a>
+        </ul>
+      </section>
+      <section class="rodape__links skeleton">
+        <h2 class="rodape__links__titulo skeleton">Links Úteis</h2>
+        <ul class="rodape__link_links skeleton">
+          <li class="rodape__links__item skeleton">
+            <a href="http://">Perguntas Frequentes</a>
+          </li>
+          <li class="rodape__links__item skeleton">
+            <a href="http://">Suporte</a>
+          </li>
+          <li class="rodape__links__item skeleton">
+            <a href="http://">Politica de Privacidade</a>
+          </li>
+          <li class="rodape__links__item skeleton">
+            <a href="http://">Fale Conosco</a>
+          </li>
+        </ul>
+      </section>
+      <section class="rodape__app__link skeleton">
+        <h2 class="rodape__titulo skeleton">Baixe nosso Aplicativo</h2>
+        <a href="https://play.google.com" class="rodape__app__link skeleton" target="_blank" rel="external">
+          <img src="./assets/img/icones/google-play.webp" alt="" />
+        </a>
+      </section>
+      <section class="rodape__newsletter skeleton">
+        <h2 class="rodape__titulo skeleton">Assine nossa Newsletter</h2>
+        <form action="" class="rodape__newsletter__form skeleton">
+          <input class="formNewsletter__input" name="emailNewsletter" id="emailNewsletter" type="email" placeholder="E-mail" minlength="4" required />
+          <button class="formNewsletter__btn" id="newsletter" type="submit">
+            Enviar
+          </button>
+        </form>
+      </section>
+    </div>
+  </footer>
+  </section>
+  <section class="cadastro" id="cadastro" aria-label="cadastro">
+    <div class="modal__cadastro" id="modal__cadastro" popover="manual">
+      <button popovertarget="modal__cadastro" popovertargetaction="hide" class="iconFechar">
+        x
+      </button>
+      <h1 class="cadastro__titulo">Cadastre-se</h1>
+      <form class="formCadastro" id="formCadastro" action="/" method="POST" dados-formularioCadastro>
+        <fieldset class="formulario__campo">
+          <label for="nome">Nome</label>
+          <input class="formcadastro__input" name="nome" id="nome" type="name" placeholder="Insira seu nome" minlength="3" required />
+          <span class="mensagem-erro"></span>
+        </fieldset>
+        <fieldset class="formulario__campo">
+          <label for="email">Email</label>
+          <input class="formcadastro__input" name="email" id="email" type="email" placeholder="Insira seu email" minlength="4" required />
+          <span class="mensagem-erro"></span>
+        </fieldset>
+        <fieldset class="formulario__campo">
+          <label for="senha">Senha</label>
+          <input class="formcadastro__input" name="senha" id="senha" type="password" placeholder="Insira sua senha" minlength="6" required />
+          <span class="mensagem-erro"></span>
+        </fieldset>
+        <fieldset class="formulario__campo">
+          <label for="bairro">Bairro</label>
+          <select id="bairro" name="bairro" required>
+            <option value="">Selecione um Bairro</option>
+            <option value="areal">Areal</option>
+            <option value="centro">Centro</option>
+            <option value="fragata">Fragata</option>
+            <option value="laranjal">Laranjal</option>
+            <option value="guabiroba">Guabiroba</option>
+            <option value="porto">Três Vendas</option>
+          </select>
+          <span class="mensagem-erro"></span>
+        </fieldset>
+
+        <button class="formcadastro__botao" id="enviar" type="submit">
+          Continuar
+        </button>
+      </form>
+    </div>
+  </section>
+  <section class="login" id="login" aria-label="login">
+    <div class="modal__login" id="modal__login" popover="manual">
+      <button popovertarget="modal__login" popovertargetaction="hide" class="iconFechar">
+        x
+      </button>
+      <h1 class="login__titulo">Login</h1>
+      <form class="formLogin" id="formLogin" action="/" method="POST" dados-formularioLogin>
+        <fieldset class="formulario__campo"></fieldset>
+        <fieldset class="formulario__campo">
+          <label for="email">Email</label>
+          <input class="formLogin__input" name="email" id="emailLogin" type="email" placeholder="Insira seu email" minlength="4" required />
+          <span class="mensagem-erro"></span>
+        </fieldset>
+        <fieldset class="formulario__campo">
+          <label for="senha">Senha</label>
+          <input class="formLogin__input" name="senha" id="senhaLogin" type="password" placeholder="Insira sua senha" minlength="6" required />
+          <span class="mensagem-erro"></span>
+        </fieldset>
+        <button class="formLogin__botao" id="logar" type="submit">
+          Continuar
+        </button>
+      </form>
+    </div>
+  </section>
+  <script src="./js/skeleton.js"></script>
+  <script src="./js/validacoes_form.js"></script>
+  <script src="./js/listaOscs_API.js"></script>
+
+</body>
+
+</html>

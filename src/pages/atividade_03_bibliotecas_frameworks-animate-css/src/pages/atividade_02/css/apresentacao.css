@@ -1,0 +1,125 @@
+/*mobile first*/
+.apresentacao {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* border: 1px solid #1d1c1c; */
+  /* height: 50vh; */
+}
+
+.apresentacao__container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 30px;
+}
+
+.apresentacao__card {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+
+.apresentacao__card__titulo {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+/* .apresentacao__card__titulo {
+  color: transparent;
+} */
+
+.destaque1 {
+  color: #f14437;
+}
+
+.destaque2 {
+  color: #2b8a86;
+}
+
+.apresentacao__btn__cadastro {
+  padding: 17px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #2b8a86;
+  color: #edf7f6;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+
+.apresentacao__btn__cadastro:hover {
+  background-color: #f16457;
+  font-weight: bold;
+  border: none;
+}
+
+.apresentacao__imagem {
+  max-width: 300px;
+}
+
+.animate__shakeX--suave {
+  animation-name: shakeX-suave;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 6;
+}
+
+@keyframes shakeX-suave {
+  0%,
+  100% {
+    transform: translateX(0); /* Posição inicial/final */
+  }
+  25% {
+    transform: translateX(-5px); /* Balança leve para a esquerda */
+  }
+  50% {
+    transform: translateX(5px); /* Balança leve para a direita */
+  }
+  75% {
+    transform: translateX(-3px); /* Volta suave */
+  }
+}
+
+/*tela tablets*/
+
+@media (min-width: 600px) {
+  .apresentacao__container {
+    grid-template-columns: 1fr 2fr;
+    align-items: end;
+  }
+
+  .apresentacao__card__conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2rem;
+    color: #243130;
+    border: 1px solid;
+    height: 100%;
+  }
+
+  .apresentacao__card__titulo {
+    font-size: 2rem;
+  }
+
+  .apresentacao__imagem {
+    opacity: 1;
+    width: 800px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* .apresentacao__container {
+    /* align-items: center;
+    height: 50vh; 
+  } */
+
+  .apresentacao__imagem {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,88 @@
+/*mobile first*/
+
+:root {
+  --animate-duration: 0.5s;
+  --animate-delay: 4s;
+}
+
+.vagas {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  /* border: 1px solid #1d1c1c; */
+  margin-top: 2%;
+}
+
+.vagas__titulo {
+  color: #243130;
+  text-transform: capitalize;
+  font-size: 2rem;
+  padding: 40px 0;
+}
+
+/*classe personalizada do animate css*/
+.tituloAnimatecss__shakeY {
+  animation-duration: 2s;
+  animation: shakeY;
+  animation-iteration-count: 5;
+}
+
+.vagas__cards {
+  display: grid;
+  gap: 20px;
+}
+
+.vagas__card {
+  display: grid;
+  background-color: #f7f7f7;
+  border: 1px solid #e7e7e7;
+  border-radius: 4px;
+  padding: 20px;
+  gap: 10px;
+}
+
+.vagas__card__imagem {
+  width: 100px;
+  height: 100px;
+}
+
+.vagas__card img {
+  width: 100%;
+  /* display: block; */
+  opacity: 1;
+}
+
+.vagas__card__conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vagas__card__titulo {
+  color: #243130;
+  /* color: transparent; */
+}
+
+.btn__vaga {
+  display: block;
+  width: 45%;
+  background-color: #0a66c2;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 24px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn__vaga i {
+  margin-left: 20px;
+}
+
+@media (min-width: 600px) {
+  .vagas__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}

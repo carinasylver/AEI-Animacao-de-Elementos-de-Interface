@@ -1,0 +1,45 @@
+/*SECTION CADASTRO e LOGIN*/
+.cadastro,
+.login {
+  position: fixed; /*Faz com que o elemento fique fixo na tela, sem rolar com a página*/
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  visibility: hidden; /* Inicialmente invisível */
+  opacity: 0; /*totalmente transparente*/
+  transition: visibility 0.6s, opacity 0.5s;
+}
+
+/*:target: Seletor que ativa quando o elemento é o alvo da URL (quando há um #id na URL que corresponde ao elemento)*/
+.cadastro:target,
+.login:target {
+  visibility: visible; /*torna o elem visivel*/
+  opacity: 1; /*totalmente visivel*/
+}
+
+/*MODAL FORM CADASTRO e LOGIN*/
+.modal__cadastro,
+.modal__login {
+  width: 300px;
+  margin: 70px auto;
+  background: #fff;
+  padding: 16px;
+  position: relative; /*Permite posicionar elementos filhos absolutamente em relação a este*/
+  border: 1px solid #0009;
+  border-radius: 16px;
+}
+
+.fechar {
+  font-size: 18px;
+  position: absolute; /*Posiciona absolutamente em relação ao modal (que tem position: relative)*/
+  right: 16px; /*colocar um position relative no modal*/
+  /* Posiciona no canto superior direito do modal */
+  top: 5px;
+  background: #000;
+  padding: 3px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}

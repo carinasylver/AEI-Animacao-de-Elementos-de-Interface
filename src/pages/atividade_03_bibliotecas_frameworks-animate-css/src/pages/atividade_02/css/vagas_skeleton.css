@@ -1,0 +1,47 @@
+.vagas.skeleton {
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+}
+
+.vagas__titulo.skeleton,
+.vagas__card.skeleton,
+.vagas__card__imagem.skeleton,
+.vagas__card__conteudo.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: efeito 1.5s infinite;
+}
+
+.vagas__titulo.skeleton {
+  margin: 0 0 5px 10px;
+  color: transparent;
+  width: 150px;
+  height: 5px;
+}
+
+.vagas__card__imagem.skeleton {
+  width: 100px;
+  height: 100px;
+}
+
+.vagas__card__conteudo.skeleton {
+  width: 550px;
+}
+
+.vagas__card__titulo.skeleton,
+.vagas__card__conteudo .skeleton ~ span {
+  color: transparent;
+}
+
+.vagas__card .skeleton img,
+.btn__vaga {
+  opacity: 0;
+}
+
+@keyframes efeito {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

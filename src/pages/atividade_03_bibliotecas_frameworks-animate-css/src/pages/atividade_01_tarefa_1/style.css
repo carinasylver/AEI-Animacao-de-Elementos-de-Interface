@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  gap: 10px;
+  padding: 10px;
+}
+
+.input-group {
+  margin: 10px;
+}
+
+.input-group label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  color: #1e1e1e;
+  /* Torna as etiquetas transparentes.*/
+  visibility: hidden;
+  transition: all 1s ease-in-out;
+  /*Define uma transição suave de 1 segundo para todas as propriedades.*/
+}
+
+.input-group input {
+  outline: 0; /*Remove a borda que aparece ao clicar em um campo de entrada.*/
+  text-align: center;
+  margin: 0px 0px;
+  padding: 3px;
+  border: none;
+  border-bottom: 1px #808080 solid;
+}
+
+/*Define o estilo dos campos de entrada quando estão em foco*/
+.input-group input:focus {
+  border-bottom: 2px #1e1e1e solid;
+  /* box-shadow: 0 2px 2px #1e1e1e inset, 0 0px transparent; */
+}
+
+.input-group input:focus::placeholder {
+  /*opacity: 0; torna o placeholder transparente quando o campo de entrada está em foco.*/
+  visibility: hidden;
+}
+
+.input-group:focus-within label {
+  visibility: visible; /*A caixa de elementos está visível.*/
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.button-group button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  background-color: #808080;
+  border: none;
+  padding-bottom: 15px;
+  transition: box-shadow 1s linear, border-left 1s ease, border-right 1s ease;
+}
+
+.button-group button:hover {
+  box-shadow: 0px 0px 10px #1e1e1e;
+  background-color: #1e1e1e;
+  color: white;
+  border-left: 25px solid #1e1e1e;
+  border-right: 25px solid #1e1e1e;
+  padding-bottom: 0px;
+}
+
+.button-group button:active {
+  transform: scale(0.95);
+  font-weight: bold;
+  box-shadow: 0px 3px 10px #1e1e1e, 3px 0px 10px #808080;
+}

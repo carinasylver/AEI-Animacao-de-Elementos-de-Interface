@@ -1,0 +1,54 @@
+/*mobile first*/
+
+.login__titulo {
+  text-align: center;
+  padding: 10px;
+  color: #243130;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.formulario__campo {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.formulario__campo label {
+  margin-bottom: 5px;
+}
+
+.formLogin__input {
+  padding: 10px;
+  border: 1px #808080 solid;
+  transition: 1s ease;
+}
+
+.formLogin__input:focus {
+  outline: 0; /* removendo o contorno padrão do navegador ao focar no elemento) */
+  border: 1px gold solid;
+}
+
+.formLogin__botao {
+  display: block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  border-radius: 24px;
+  width: 100%;
+  border: 0;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #2b8a86;
+}
+
+.formLogin__botao:hover {
+  background-image: linear-gradient(to bottom right, #2b8a86, #21cdc3);
+}
+
+/*validacao form*/
+.mensagem-erro {
+  color: red;
+  margin: 10px 0;
+}

@@ -1,0 +1,39 @@
+.apresentacao__card__titulo.skeleton,
+.destaque1.skeleton,
+.destaque2.skeleton,
+.apresentacao__btn__cadastro.skeleton {
+  color: transparent;
+}
+
+/*animacao*/
+.apresentacao__container.skeleton,
+.apresentacao__btn__cadastro.skeleton {
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  background-size: 200% 100%;
+  animation: efeito 1.5s infinite;
+}
+
+.apresentacao__card__titulo.skeleton,
+.apresentacao__card__imagem.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: efeito 1.5s infinite;
+}
+
+.apresentacao__card__titulo.skeleton {
+  border: 1px solid;
+}
+
+.apresentacao__imagem.skeleton {
+  opacity: 0;
+  width: 800px;
+}
+
+@keyframes efeito {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

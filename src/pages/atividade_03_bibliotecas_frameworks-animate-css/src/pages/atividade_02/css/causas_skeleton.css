@@ -1,0 +1,36 @@
+.causas.skeleton {
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+}
+
+.causas__titulo.skeleton,
+.causas__card.skeleton {
+  /* background-color: gray; */
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: efeito 1.5s infinite;
+  /* border: 1px solid; */
+}
+
+.causas__titulo.skeleton {
+  margin-left: 10px;
+  color: transparent;
+  width: 150px;
+  height: 5px;
+}
+
+.causas__card__titulo.skeleton {
+  color: transparent;
+}
+
+.causas__img.skeleton {
+  opacity: 0;
+}
+
+@keyframes efeito {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
