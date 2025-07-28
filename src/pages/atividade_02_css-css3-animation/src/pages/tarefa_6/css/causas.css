@@ -1,0 +1,58 @@
+/*mobile first*/
+.causas {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* border: 1px solid #1d1c1c; */
+}
+
+.causas__titulo {
+  color: #243130;
+  text-transform: capitalize;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+.causas__container__cards {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+}
+
+.causas__card {
+  display: grid;
+  background-color: #f7f7f7;
+  border: 1px solid #e7e7e7;
+  border-radius: 4px;
+  padding: 20px;
+  gap: 10px;
+}
+
+.causas__img {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.causas__card__titulo {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/*tela tablets*/
+
+@media (min-width: 600px) {
+  .causas__container__cards {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding: 5px;
+  }
+}
+
+/*telas maiores*/
+@media (min-width: 768px) {
+  .causas__container__cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,96 @@
+/*mobile first*/
+
+.cabecalho {
+  background-color: #2b8a86;
+  color: #edf7f6;
+}
+
+.cabecalho__navegacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* border: 1px solid black; */
+}
+
+.logo h1 {
+  font-size: 1.3rem;
+  color: #edf7f6;
+}
+
+/*cadastro e login*/
+.navegacao__menu__links_autenticacao {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn__cadastro {
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  color: #edf7f6;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn__cadastro:hover {
+  background-color: #f16457;
+}
+
+.btn__login {
+  background: none;
+  color: #edf7f6;
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn__login:hover {
+  background-image: linear-gradient(to bottom right, #2b8a86, #21cdc3);
+}
+
+/*menu voluntarios e vagas*/
+.navegacao__menu__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 50px;
+  justify-content: center;
+}
+
+.navegacao__menu__link a {
+  color: #ffffff;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.navegacao__menu__link a:hover {
+  text-decoration: underline;
+}
+
+/*telas maiores*/
+@media (min-width: 800px) {
+  .cabecalho__navegacao {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navegacao__menu__links_autenticacao {
+    order: 1;
+  }
+
+  .navegacao__menu__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+}

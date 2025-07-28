@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.progress-loader {
+  width: 250px;
+  border: 1px solid black;
+  height: 25px;
+}
+
+.progress {
+  height: 25px;
+  background: red;
+  animation: loading 2s ease forwards;
+  animation-play-state: paused;
+}
+
+.progress-loader:hover .progress {
+  animation-play-state: running;
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+
+  10% {
+    width: 10%;
+  }
+
+  50% {
+    width: 40%;
+  }
+
+  60% {
+    width: 60%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
