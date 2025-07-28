@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles/style.css" />
+
+  <!-- fonte Raleway -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" />
+  <!--icones -> https://fontawesome.com/ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Solidarize</title>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <nav class="cabecalho__navegacao">
+      <div class="logo">
+        <a href="../../../index.html">
+          <h1><i class="fa-solid fa-handshake-simple"></i> Solidarize</h1>
+        </a>
+      </div>
+      <div class="navegacao__menu__links_autenticacao">
+        <button popovertarget="modal__cadastro" class="btn__cadastro">
+          Cadastre-se agora
+        </button>
+        <button popovertarget="modal__login" class="btn__login">
+          Entrar
+        </button>
+      </div>
+      <div class="cabecalho__pesquisa">
+        <select id="dropdown__menu" class="dropdown__menu">
+          <option value="OSCs">OSCs</option>
+          <option value="Vagas">Vagas</option>
+          <option value="Voluntários">Voluntários</option>
+        </select>
+        <form class="form__pesquisa">
+          <input class="form__pesquisa__icon" type="search" placeholder="Pesquisar" id="pesquisar" />
+        </form>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="oscs" id="oscs">
+      <div class="tabela">
+        <div class="tabela__head">
+          <ul class="tabela__cabecalho">
+            <li class="tabela__cabecalho-item">Nome da OSC</li>
+            <li class="tabela__cabecalho-item">Natureza Jurídica</li>
+            <li class="tabela__cabecalho-item">Endereço</li>
+          </ul>
+        </div>
+        <div class="tabela__body">
+          <ul class="tabela__celula"></ul>
+        </div>
+      </div>
+    </section>
+    <section class="cadastro" id="cadastro" aria-label="cadastro">
+      <div class="modal__cadastro" id="modal__cadastro" popover="manual">
+        <button popovertarget="modal__cadastro" popovertargetaction="hide" class="iconFechar">
+          x
+        </button>
+        <h1 class="cadastro__titulo">Cadastre-se</h1>
+        <form class="formCadastro" id="formCadastro" action="/" method="POST" dados-formularioCadastro>
+          <fieldset class="formulario__campo">
+            <label for="nome">Nome</label>
+            <input class="formcadastro__input" name="nome" id="nome" type="name" placeholder="Insira seu nome" minlength="3" required />
+            <span class="mensagem-erro"></span>
+          </fieldset>
+          <fieldset class="formulario__campo">
+            <label for="email">Email</label>
+            <input class="formcadastro__input" name="email" id="email" type="email" placeholder="Insira seu email" minlength="4" required />
+            <span class="mensagem-erro"></span>
+          </fieldset>
+          <fieldset class="formulario__campo">
+            <label for="senha">Senha</label>
+            <input class="formcadastro__input" name="senha" id="senha" type="password" placeholder="Insira sua senha" minlength="6" required />
+            <span class="mensagem-erro"></span>
+          </fieldset>
+          <fieldset class="formulario__campo">
+            <label for="bairro">Bairro</label>
+            <select id="bairro" name="bairro" required>
+              <option value="">Selecione um Bairro</option>
+              <option value="areal">Areal</option>
+              <option value="centro">Centro</option>
+              <option value="fragata">Fragata</option>
+              <option value="laranjal">Laranjal</option>
+              <option value="guabiroba">Guabiroba</option>
+              <option value="porto">Três Vendas</option>
+            </select>
+            <span class="mensagem-erro"></span>
+          </fieldset>
+
+          <button class="formcadastro__botao" id="enviar" type="submit">
+            Continuar
+          </button>
+        </form>
+      </div>
+    </section>
+    <section class="login" id="login" aria-label="login">
+      <div class="modal__login" id="modal__login" popover="manual">
+        <button popovertarget="modal__login" popovertargetaction="hide" class="iconFechar">
+          x
+        </button>
+        <h1 class="login__titulo">Login</h1>
+        <form class="formLogin" id="formLogin" action="/" method="POST" dados-formularioLogin>
+          <fieldset class="formulario__campo"></fieldset>
+          <fieldset class="formulario__campo">
+            <label for="email">Email</label>
+            <input class="formLogin__input" name="email" id="emailLogin" type="email" placeholder="Insira seu email" minlength="4" required />
+            <span class="mensagem-erro"></span>
+          </fieldset>
+          <fieldset class="formulario__campo">
+            <label for="senha">Senha</label>
+            <input class="formLogin__input" name="senha" id="senhaLogin" type="password" placeholder="Insira sua senha" minlength="6" required />
+            <span class="mensagem-erro"></span>
+          </fieldset>
+          <button class="formLogin__botao" id="logar" type="submit">
+            Continuar
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="rodape">
+    <div class="rodape__navegacao">
+      <section class="rodape__projeto">
+        <h2 class="rodape__titulo">Solidarize © 2025</h2>
+        <p class="rodape__texto">
+          Somos uma plataforma de impacto social. Ajudamos conectar
+          Voluntários a Organizações Sociais através do voluntariado.
+        </p>
+        <ul class="rodape__redes__links">
+          <a href="https://www.linkedin.com" target="_blank" rel="external">
+            <li><i class="fa-brands fa-linkedin"></i></li>
+          </a>
+          <a href="https://www.instagram.com/projeto.solidarizers/" target="_blank" rel="external">
+            <li><i class="fa-brands fa-instagram"></i></li>
+          </a>
+          <a href="https://www.tiktok.com" target="_blank" rel="external">
+            <li><i class="fa-brands fa-tiktok"></i></li>
+          </a>
+          <a href="https://www.x.com" target="_blank" rel="external">
+            <li><i class="fa-brands fa-x-twitter"></i></li>
+          </a>
+          <a href="https://www.facebook.com" target="_blank" rel="external">
+            <li><i class="fa-brands fa-facebook"></i></li>
+          </a>
+        </ul>
+      </section>
+      <section class="rodape__links">
+        <h2 class="rodape__titulo">Links Úteis</h2>
+        <ul class="rodape__links">
+          <li class="rodape__links__item">
+            <a href="http://">Perguntas Frequentes</a>
+          </li>
+          <li class="rodape__links__item">
+            <a href="http://">Suporte</a>
+          </li>
+          <li class="rodape__links__item">
+            <a href="http://">Politica de Privacidade</a>
+          </li>
+          <li class="rodape__links__item">
+            <a href="http://">Fale Conosco</a>
+          </li>
+        </ul>
+      </section>
+      <section class="rodape__app__link">
+        <h2 class="rodape__titulo">Baixe nosso Aplicativo</h2>
+        <a href="https://play.google.com" class="rodape__app__link" target="_blank" rel="external">
+          <img src="../assets/img/icones/google-play.webp" alt="" />
+        </a>
+      </section>
+      <section class="rodape__newsletter">
+        <h2 class="rodape__titulo">Assine nossa Newsletter</h2>
+        <form action="" class="rodape__newsletter__form">
+          <input class="formNewsletter__input" name="emailNewsletter" id="emailNewsletter" type="email" placeholder="E-mail" minlength="4" required />
+          <button class="formNewsletter__btn" id="newsletter" type="submit">
+            Enviar
+          </button>
+        </form>
+      </section>
+    </div>
+  </footer>
+
+  <script src="../../../modules/validacoes_form.js"></script>
+  <script src="../../../modules/listaOscs_API.js"></script>
+</body>
+
+</html>
