@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/assets/styles/style.css" />
+
+  <!-- fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+
+  <!--icones -> https://fontawesome.com/ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- utilização do animate css via cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- utilização do animejs via cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/animejs@4.0.2/lib/anime.iife.min.js"></script>
+
+  <title>Solidarize</title>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <nav class="cabecalho__navegacao">
+
+      <div class="logo animate__animated animate__swing">
+        <h1>
+          <i class="fa-solid fa-handshake-simple">
+            <!-- <img src="./src/assets/img/logo-solidarize.svg" alt="logo solidarize"> -->
+            <svg width="78" height="11" viewBox="0 0 78 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.34 10.098C3.65867 10.098 3.04267 9.98133 2.492 9.748C1.95067 9.51467 1.52133 9.17867 1.204 8.74C0.886667 8.30133 0.723333 7.78333 0.714 7.186H2.814C2.842 7.58733 2.982 7.90467 3.234 8.138C3.49533 8.37133 3.85 8.488 4.298 8.488C4.75533 8.488 5.11467 8.38067 5.376 8.166C5.63733 7.942 5.768 7.65267 5.768 7.298C5.768 7.00867 5.67933 6.77067 5.502 6.584C5.32467 6.39733 5.10067 6.25267 4.83 6.15C4.56867 6.038 4.20467 5.91667 3.738 5.786C3.10333 5.59933 2.58533 5.41733 2.184 5.24C1.792 5.05333 1.45133 4.778 1.162 4.414C0.882 4.04067 0.742 3.546 0.742 2.93C0.742 2.35133 0.886667 1.84733 1.176 1.418C1.46533 0.988666 1.87133 0.662 2.394 0.438C2.91667 0.204666 3.514 0.0879999 4.186 0.0879999C5.194 0.0879999 6.01067 0.335333 6.636 0.83C7.27067 1.31533 7.62067 1.99667 7.686 2.874H5.53C5.51133 2.538 5.36667 2.26267 5.096 2.048C4.83467 1.824 4.48467 1.712 4.046 1.712C3.66333 1.712 3.35533 1.81 3.122 2.006C2.898 2.202 2.786 2.48667 2.786 2.86C2.786 3.12133 2.87 3.34067 3.038 3.518C3.21533 3.686 3.43 3.826 3.682 3.938C3.94333 4.04067 4.30733 4.162 4.774 4.302C5.40867 4.48867 5.92667 4.67533 6.328 4.862C6.72933 5.04867 7.07467 5.32867 7.364 5.702C7.65333 6.07533 7.798 6.56533 7.798 7.172C7.798 7.69467 7.66267 8.18 7.392 8.628C7.12133 9.076 6.72467 9.43533 6.202 9.706C5.67933 9.96733 5.05867 10.098 4.34 10.098ZM14.0333 10.098C13.1186 10.098 12.2786 9.88333 11.5133 9.454C10.7479 9.02467 10.1413 8.432 9.69325 7.676C9.24525 6.91067 9.02125 6.04733 9.02125 5.086C9.02125 4.134 9.24525 3.28 9.69325 2.524C10.1413 1.75867 10.7479 1.16133 11.5133 0.731999C12.2786 0.302666 13.1186 0.0879999 14.0333 0.0879999C14.9573 0.0879999 15.7973 0.302666 16.5533 0.731999C17.3186 1.16133 17.9206 1.75867 18.3593 2.524C18.8073 3.28 19.0313 4.134 19.0313 5.086C19.0313 6.04733 18.8073 6.91067 18.3593 7.676C17.9206 8.432 17.3186 9.02467 16.5533 9.454C15.7879 9.88333 14.9479 10.098 14.0333 10.098ZM14.0333 8.348C14.6213 8.348 15.1393 8.21733 15.5873 7.956C16.0353 7.68533 16.3853 7.30267 16.6373 6.808C16.8893 6.31333 17.0153 5.73933 17.0153 5.086C17.0153 4.43267 16.8893 3.86333 16.6373 3.378C16.3853 2.88333 16.0353 2.50533 15.5873 2.244C15.1393 1.98267 14.6213 1.852 14.0333 1.852C13.4453 1.852 12.9226 1.98267 12.4653 2.244C12.0173 2.50533 11.6673 2.88333 11.4153 3.378C11.1633 3.86333 11.0373 4.43267 11.0373 5.086C11.0373 5.73933 11.1633 6.31333 11.4153 6.808C11.6673 7.30267 12.0173 7.68533 12.4653 7.956C12.9226 8.21733 13.4453 8.348 14.0333 8.348ZM22.4494 8.446H25.6694V10H20.4894V0.228H22.4494V8.446ZM28.8752 0.228V10H26.9152V0.228H28.8752ZM34.2277 0.228C35.2544 0.228 36.155 0.428666 36.9297 0.83C37.7137 1.23133 38.3157 1.80533 38.7357 2.552C39.165 3.28933 39.3797 4.148 39.3797 5.128C39.3797 6.108 39.165 6.96667 38.7357 7.704C38.3157 8.432 37.7137 8.99667 36.9297 9.398C36.155 9.79933 35.2544 10 34.2277 10H30.8117V0.228H34.2277ZM34.1577 8.334C35.1844 8.334 35.9777 8.054 36.5377 7.494C37.0977 6.934 37.3777 6.14533 37.3777 5.128C37.3777 4.11067 37.0977 3.31733 36.5377 2.748C35.9777 2.16933 35.1844 1.88 34.1577 1.88H32.7717V8.334H34.1577ZM46.8389 8.138H42.9469L42.3029 10H40.2449L43.7589 0.213999H46.0409L49.5549 10H47.4829L46.8389 8.138ZM46.3069 6.57L44.8929 2.482L43.4789 6.57H46.3069ZM55.9083 10L53.7523 6.192H52.8283V10H50.8683V0.228H54.5363C55.2923 0.228 55.9363 0.363333 56.4683 0.634C57.0003 0.895333 57.397 1.25467 57.6583 1.712C57.929 2.16 58.0643 2.664 58.0643 3.224C58.0643 3.868 57.8777 4.45133 57.5043 4.974C57.131 5.48733 56.5757 5.842 55.8383 6.038L58.1763 10H55.9083ZM52.8283 4.722H54.4663C54.9983 4.722 55.395 4.596 55.6563 4.344C55.9177 4.08267 56.0483 3.72333 56.0483 3.266C56.0483 2.818 55.9177 2.47267 55.6563 2.23C55.395 1.978 54.9983 1.852 54.4663 1.852H52.8283V4.722ZM61.7971 0.228V10H59.8371V0.228H61.7971ZM65.7356 8.348H70.1316V10H63.4676V8.488L67.8356 1.88H63.4676V0.228H70.1316V1.74L65.7356 8.348ZM73.76 1.81V4.26H77.05V5.814H73.76V8.404H77.47V10H71.8V0.213999H77.47V1.81H73.76Z" fill="#EDF7F6" />
+            </svg>
+          </i>
+          <!-- <span class="solidarize">SOLIDARIZE</span> -->
+        </h1>
+      </div>
+      <div class="cabecalho navegacao__menu__links_autenticacao">
+        <button popovertarget="modal__cadastro" class="btn__cadastro animate__animated animate__bounce animmate-delay-10s">
+          Cadastre-se agora
+        </button>
+        <button popovertarget="modal__login" class="btn__login">
+          Entrar
+        </button>
+      </div>
+      <ul class="navegacao__menu__links">
+        <li class="navegacao__menu__link">
+          <i class="fa-solid fa-users"></i>
+          <a href="#voluntarios">Voluntários</a>
+        </li>
+        <li class="navegacao__menu__link">
+          <i class="fa-solid fa-briefcase"></i>
+          <a href="./src/pages/vagas.html">Vagas</a>
+        </li>
+        <li class="navegacao__menu__link">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+          <a href="#causas">Causas</a>
+        </li>
+        <li class="navegacao__menu__link">
+          <i class="fa-solid fa-earth-americas"></i>
+          <a href="./src/pages/oscs.html">OSCs</a>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+  <main>
+    <section></section>
+    <section class="apresentacao">
+      <div class="apresentacao__container">
+        <div class="apresentacao__card">
+          <div class="apresentacao__card__titulo">
+            <h2 class="apresentacao__destaque_titulo">
+              <span>J</span>
+              <span>U</span>
+              <span>N</span>
+              <span>T</span>
+              <span>E</span>
+              <span>-</span>
+              <span>S</span>
+              <span>E</span>
+              <span>&nbsp;</span>
+              <span>À</span>
+              <span>&nbsp;</span>
+              <span>N</span>
+              <span>Ó</span>
+              <span>S</span>
+              <span>!</span>
+            </h2>
+            <span class="destaque1">Cadastre-se</span> e
+            encontre oportunidades de
+            <span class="destaque2">voluntariado</span>
+          </div>
+          <button popovertarget="modal__cadastro" class="apresentacao__btn__cadastro">
+            Cadastre-se
+          </button>
+        </div>
+        <div class="apresentacao__card__imagem animate__animated animate__shakeX--suave">
+          <img class="apresentacao__imagem" src="./src/assets/img/volunteer.png" alt="" />
+        </div>
+
+      </div>
+    </section>
+
+    <section class="causas" id="causas" aria-label="causas">
+      <h1 class="causas__titulo">causas</h1>
+      <div class="causas__container__cards">
+        <div class="causas__card">
+          <img class="causas__img" src="./src/assets/img/causas/mulheres.jpg" alt="" />
+          <h2 class="causas__card__titulo">Mulheres</h2>
+        </div>
+        <div class="causas__card">
+          <img class="causas__img" src="./src/assets/img/causas/criancas.jpg" alt="" />
+          <h2 class="causas__card__titulo">Crianças</h2>
+        </div>
+        <div class="causas__card">
+          <img class="causas__img" src="./src/assets/img/causas/lgbtqi.jpeg" alt="" />
+          <h2 class="causas__card__titulo">LGBTQIA+</h2>
+        </div>
+        <div class="causas__card">
+          <img class="causas__img" src="./src/assets/img/causas/direitos-civis-acoes-sociais.jpg" alt="" />
+          <h2 class="causas__card__titulo">
+            Direitos civis e ações sociais
+          </h2>
+
+        </div>
+        <div class="causas__card">
+          <img class="causas__img" src="./src/assets/img/causas/assistencia-saude-humanitaria.jpg" alt="" />
+          <h2 class="causas__card__titulo">
+            Saúde e assistência humanitária
+          </h2>
+        </div>
+        <div class="causas__card">
+
+          <img class="causas__img" src="./src/assets/img/causas/combate-pobreza.jpg" alt="" />
+          <h2 class="causas__card__titulo">Combate à pobreza</h2>
+        </div>
+        <div class="causas__card">
+          <img class="causas__img" src="./src/assets/img/causas/senior.jpg" alt="" />
+          <h2 class="causas__card__titulo">Idosos</h2>
+        </div>
+        <div class="causas__card">
+          <img class="causas__img" src="./src/assets/img/causas/protecao-animal.jpg" alt="" />
+          <h2 class="causas__card__titulo">Proteção animal</h2>
+        </div>
+        <div class="causas__card">
+
+          <img class="causas__img" src="./src/assets/img/causas/educacao.jpg" alt="" />
+          <h2 class="causas__card__titulo">Educação</h2>
+
+        </div>
+        <div class="causas__card">
+          <img class="causas__img" src="./src/assets/img/causas/meio-ambiente.jpg" alt="" />
+          <h2 class="causas__card__titulo">Meio ambiente</h2>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="vagas" id="vagas" aria-label="vagas">
+      <h1 class="vagas__titulo animate__animated tituloAnimatecss__shakeY ">Vagas</h1>
+      <div class="vagas__cards">
+        <div class="vagas__card">
+          <div class="vagas__card__imagem">
+            <img src="./src/assets/img/oscs/dona-conceicao.png" alt="" />
+          </div>
+
+          <div class="vagas__card__conteudo">
+            <h2 class="vagas__card__titulo">Lorem ipsum dolor sit amet</h2>
+            <span class="">Lar da Criança Dona Conceição</span>
+            <a href="#" class="btn__vaga">Candidatar-se
+              <!-- animação seta btn candidatar-se -->
+              <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="square" clip-path="url(#clip0_11_30)">
+                  <path id="quadrado" d="M10 7H2V23H18V14.5789" stroke="white" stroke-width="2" stroke-linecap="round" />
+                  <g id="seta">
+                    <g id="Line 1" filter="url(#filter0_d_11_30)">
+                      <path d="M5.29289 18.2929C4.90237 18.6834 4.90237 19.3166 5.29289 19.7071C5.68342 20.0976 6.31658 20.0976 6.70711 19.7071L5.29289 18.2929ZM6 19L6.70711 19.7071L14.7071 11.7071L14 11L13.2929 10.2929L5.29289 18.2929L6 19Z" fill="white" />
+                    </g>
+                    <path id="Polygon 1" d="M13.6365 9.91974C14.3303 9.74252 14.98 10.3305 14.8727 11.0385L14.1363 15.8982C14.0168 16.6866 13.0678 17.0248 12.4766 16.4898L8.45077 12.8466C7.85952 12.3115 8.10167 11.3336 8.87427 11.1362L13.6365 9.91974Z" fill="white" />
+                  </g>
+                </g>
+                <defs>
+                  <filter id="filter0_d_11_30" x="1" y="10.2929" width="17.7071" height="17.7071" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_11_30" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_11_30" result="shape" />
+                  </filter>
+                  <clipPath id="clip0_11_30">
+                    <rect width="23" height="25" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="vagas__card">
+          <div class="vagas__card__imagem">
+            <img src="./src/assets/img/oscs/um-de-nos.png" alt="" />
+          </div>
+          <div class="vagas__card__conteudo">
+            <h2 class="vagas__card__titulo">Lorem ipsum dolor sit amet</h2>
+            <span>Coletivo Um de Nós</span>
+            <a href="#" class="btn__vaga">Candidatar-se
+
+              <!-- animação seta btn candidatar-se -->
+              <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="square" clip-path="url(#clip0_11_30)">
+                  <path id="quadrado" d="M10 7H2V23H18V14.5789" stroke="white" stroke-width="2" stroke-linecap="round" />
+                  <g id="seta">
+                    <g id="Line 1" filter="url(#filter0_d_11_30)">
+                      <path d="M5.29289 18.2929C4.90237 18.6834 4.90237 19.3166 5.29289 19.7071C5.68342 20.0976 6.31658 20.0976 6.70711 19.7071L5.29289 18.2929ZM6 19L6.70711 19.7071L14.7071 11.7071L14 11L13.2929 10.2929L5.29289 18.2929L6 19Z" fill="white" />
+                    </g>
+                    <path id="Polygon 1" d="M13.6365 9.91974C14.3303 9.74252 14.98 10.3305 14.8727 11.0385L14.1363 15.8982C14.0168 16.6866 13.0678 17.0248 12.4766 16.4898L8.45077 12.8466C7.85952 12.3115 8.10167 11.3336 8.87427 11.1362L13.6365 9.91974Z" fill="white" />
+                  </g>
+                </g>
+                <defs>
+                  <filter id="filter0_d_11_30" x="1" y="10.2929" width="17.7071" height="17.7071" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_11_30" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_11_30" result="shape" />
+                  </filter>
+                  <clipPath id="clip0_11_30">
+                    <rect width="23" height="25" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="vagas__card">
+          <div class="vagas__card__imagem">
+            <img src="./src/assets/img/oscs/sos-animais.jpg" alt="" />
+          </div>
+          <div class="vagas__card__conteudo">
+            <h2 class="vagas__card__titulo">Lorem ipsum dolor sit amet</h2>
+            <span>SOS Animais</span>
+            <a href="#" class="btn__vaga">Candidatar-se
+
+              <!-- animação seta btn candidatar-se -->
+              <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="square" clip-path="url(#clip0_11_30)">
+                  <path id="quadrado" d="M10 7H2V23H18V14.5789" stroke="white" stroke-width="2" stroke-linecap="round" />
+                  <g id="seta">
+                    <g id="Line 1" filter="url(#filter0_d_11_30)">
+                      <path d="M5.29289 18.2929C4.90237 18.6834 4.90237 19.3166 5.29289 19.7071C5.68342 20.0976 6.31658 20.0976 6.70711 19.7071L5.29289 18.2929ZM6 19L6.70711 19.7071L14.7071 11.7071L14 11L13.2929 10.2929L5.29289 18.2929L6 19Z" fill="white" />
+                    </g>
+                    <path id="Polygon 1" d="M13.6365 9.91974C14.3303 9.74252 14.98 10.3305 14.8727 11.0385L14.1363 15.8982C14.0168 16.6866 13.0678 17.0248 12.4766 16.4898L8.45077 12.8466C7.85952 12.3115 8.10167 11.3336 8.87427 11.1362L13.6365 9.91974Z" fill="white" />
+                  </g>
+                </g>
+                <defs>
+                  <filter id="filter0_d_11_30" x="1" y="10.2929" width="17.7071" height="17.7071" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_11_30" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_11_30" result="shape" />
+                  </filter>
+                  <clipPath id="clip0_11_30">
+                    <rect width="23" height="25" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+
+
+          </div>
+        </div>
+
+        <div class="vagas__card">
+          <div class="vagas__card__imagem">
+            <img src="./src/assets/img/oscs/apadpel.jpg" alt="" />
+          </div>
+          <div class="vagas__card__conteudo">
+            <h2 class="vagas__card__titulo">Lorem ipsum dolor sit amet</h2>
+            <span>Associação de Pais de Pessoas com Síndrome de Down</span>
+            <a href="#" class="btn__vaga">Candidatar-se
+
+              <!-- animação seta btn candidatar-se -->
+              <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="square" clip-path="url(#clip0_11_30)">
+                  <path id="quadrado" d="M10 7H2V23H18V14.5789" stroke="white" stroke-width="2" stroke-linecap="round" />
+                  <g id="seta">
+                    <g id="Line 1" filter="url(#filter0_d_11_30)">
+                      <path d="M5.29289 18.2929C4.90237 18.6834 4.90237 19.3166 5.29289 19.7071C5.68342 20.0976 6.31658 20.0976 6.70711 19.7071L5.29289 18.2929ZM6 19L6.70711 19.7071L14.7071 11.7071L14 11L13.2929 10.2929L5.29289 18.2929L6 19Z" fill="white" />
+                    </g>
+                    <path id="Polygon 1" d="M13.6365 9.91974C14.3303 9.74252 14.98 10.3305 14.8727 11.0385L14.1363 15.8982C14.0168 16.6866 13.0678 17.0248 12.4766 16.4898L8.45077 12.8466C7.85952 12.3115 8.10167 11.3336 8.87427 11.1362L13.6365 9.91974Z" fill="white" />
+                  </g>
+                </g>
+                <defs>
+                  <filter id="filter0_d_11_30" x="1" y="10.2929" width="17.7071" height="17.7071" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_11_30" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_11_30" result="shape" />
+                  </filter>
+                  <clipPath id="clip0_11_30">
+                    <rect width="23" height="25" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="vagas__card">
+          <div class="vagas__card__imagem">
+            <img src="./src/assets/img/oscs/helio-dangola.png" alt="" />
+          </div>
+          <div class="vagas__card__conteudo">
+            <h2 class="vagas__card__titulo">Lorem ipsum dolor sit amet</h2>
+            <span>Instituto Hélio D'Angola</span>
+            <a href="#" class="btn__vaga">Candidatar-se
+              <!-- animação seta btn candidatar-se -->
+              <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="square" clip-path="url(#clip0_11_30)">
+                  <path id="quadrado" d="M10 7H2V23H18V14.5789" stroke="white" stroke-width="2" stroke-linecap="round" />
+                  <g id="seta">
+                    <g id="Line 1" filter="url(#filter0_d_11_30)">
+                      <path d="M5.29289 18.2929C4.90237 18.6834 4.90237 19.3166 5.29289 19.7071C5.68342 20.0976 6.31658 20.0976 6.70711 19.7071L5.29289 18.2929ZM6 19L6.70711 19.7071L14.7071 11.7071L14 11L13.2929 10.2929L5.29289 18.2929L6 19Z" fill="white" />
+                    </g>
+                    <path id="Polygon 1" d="M13.6365 9.91974C14.3303 9.74252 14.98 10.3305 14.8727 11.0385L14.1363 15.8982C14.0168 16.6866 13.0678 17.0248 12.4766 16.4898L8.45077 12.8466C7.85952 12.3115 8.10167 11.3336 8.87427 11.1362L13.6365 9.91974Z" fill="white" />
+                  </g>
+                </g>
+                <defs>
+                  <filter id="filter0_d_11_30" x="1" y="10.2929" width="17.7071" height="17.7071" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_11_30" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_11_30" result="shape" />
+                  </filter>
+                  <clipPath id="clip0_11_30">
+                    <rect width="23" height="25" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="vagas__card">
+          <div class="vagas__card__imagem">
+            <img src="./src/assets/img/oscs/amica.jpg" alt="" />
+          </div>
+          <div class="vagas__card__conteudo">
+            <h2 class="vagas__card__titulo">Lorem ipsum dolor sit amet</h2>
+            <span>Fundação Amigos do Caminho</span>
+            <a href="#" class="btn__vaga">Candidatar-se
+              <!-- animação seta btn candidatar-se -->
+              <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="square" clip-path="url(#clip0_11_30)">
+                  <path id="quadrado" d="M10 7H2V23H18V14.5789" stroke="white" stroke-width="2" stroke-linecap="round" />
+                  <g id="seta">
+                    <g id="Line 1" filter="url(#filter0_d_11_30)">
+                      <path d="M5.29289 18.2929C4.90237 18.6834 4.90237 19.3166 5.29289 19.7071C5.68342 20.0976 6.31658 20.0976 6.70711 19.7071L5.29289 18.2929ZM6 19L6.70711 19.7071L14.7071 11.7071L14 11L13.2929 10.2929L5.29289 18.2929L6 19Z" fill="white" />
+                    </g>
+                    <path id="Polygon 1" d="M13.6365 9.91974C14.3303 9.74252 14.98 10.3305 14.8727 11.0385L14.1363 15.8982C14.0168 16.6866 13.0678 17.0248 12.4766 16.4898L8.45077 12.8466C7.85952 12.3115 8.10167 11.3336 8.87427 11.1362L13.6365 9.91974Z" fill="white" />
+                  </g>
+                </g>
+                <defs>
+                  <filter id="filter0_d_11_30" x="1" y="10.2929" width="17.7071" height="17.7071" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_11_30" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_11_30" result="shape" />
+                  </filter>
+                  <clipPath id="clip0_11_30">
+                    <rect width="23" height="25" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+            </a>
+          </div>
+        </div>
+        <div class="vagas__card">
+          <div class="vagas__card__imagem">
+            <img src="./src/assets/img/oscs/ong-alimentar.jpg" alt="" />
+          </div>
+          <div class="vagas__card__conteudo">
+            <h2 class="vagas__card__titulo">Lorem ipsum dolor sit amet</h2>
+            <span>ONG Alimentar</span>
+            <a href="#" class="btn__vaga">Candidatar-se
+              <!-- animação seta btn candidatar-se -->
+              <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="square" clip-path="url(#clip0_11_30)">
+                  <path id="quadrado" d="M10 7H2V23H18V14.5789" stroke="white" stroke-width="2" stroke-linecap="round" />
+                  <g id="seta">
+                    <g id="Line 1" filter="url(#filter0_d_11_30)">
+                      <path d="M5.29289 18.2929C4.90237 18.6834 4.90237 19.3166 5.29289 19.7071C5.68342 20.0976 6.31658 20.0976 6.70711 19.7071L5.29289 18.2929ZM6 19L6.70711 19.7071L14.7071 11.7071L14 11L13.2929 10.2929L5.29289 18.2929L6 19Z" fill="white" />
+                    </g>
+                    <path id="Polygon 1" d="M13.6365 9.91974C14.3303 9.74252 14.98 10.3305 14.8727 11.0385L14.1363 15.8982C14.0168 16.6866 13.0678 17.0248 12.4766 16.4898L8.45077 12.8466C7.85952 12.3115 8.10167 11.3336 8.87427 11.1362L13.6365 9.91974Z" fill="white" />
+                  </g>
+                </g>
+                <defs>
+                  <filter id="filter0_d_11_30" x="1" y="10.2929" width="17.7071" height="17.7071" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_11_30" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_11_30" result="shape" />
+                  </filter>
+                  <clipPath id="clip0_11_30">
+                    <rect width="23" height="25" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+            </a>
+          </div>
+        </div>
+        <div class="vagas__card">
+          <div class="vagas__card__imagem">
+            <img src="./src/assets/img/oscs/lar-de-jesus.jpg" alt="" />
+          </div>
+          <div class="vagas__card__conteudo">
+            <h2 class="vagas__card__titulo">Lorem ipsum dolor sit amet</h2>
+            <span>Instituto Lar de Jesus</span>
+            <a href="#" class="btn__vaga">Candidatar-se
+              <!-- animação seta btn candidatar-se -->
+              <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="square" clip-path="url(#clip0_11_30)">
+                  <path id="quadrado" d="M10 7H2V23H18V14.5789" stroke="white" stroke-width="2" stroke-linecap="round" />
+                  <g id="seta">
+                    <g id="Line 1" filter="url(#filter0_d_11_30)">
+                      <path d="M5.29289 18.2929C4.90237 18.6834 4.90237 19.3166 5.29289 19.7071C5.68342 20.0976 6.31658 20.0976 6.70711 19.7071L5.29289 18.2929ZM6 19L6.70711 19.7071L14.7071 11.7071L14 11L13.2929 10.2929L5.29289 18.2929L6 19Z" fill="white" />
+                    </g>
+                    <path id="Polygon 1" d="M13.6365 9.91974C14.3303 9.74252 14.98 10.3305 14.8727 11.0385L14.1363 15.8982C14.0168 16.6866 13.0678 17.0248 12.4766 16.4898L8.45077 12.8466C7.85952 12.3115 8.10167 11.3336 8.87427 11.1362L13.6365 9.91974Z" fill="white" />
+                  </g>
+                </g>
+                <defs>
+                  <filter id="filter0_d_11_30" x="1" y="10.2929" width="17.7071" height="17.7071" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_11_30" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_11_30" result="shape" />
+                  </filter>
+                  <clipPath id="clip0_11_30">
+                    <rect width="23" height="25" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="rodape">
+    <div class="rodape__navegacao">
+      <section class="rodape__projeto">
+        <h2 class="rodape__titulo">Solidarize © 2025</h2>
+        <p class="rodape__texto">
+          Somos uma plataforma de impacto social. Ajudamos conectar
+          Voluntários a Organizações Sociais através do voluntariado.
+        </p>
+        <ul class="rodape__redes__links">
+          <a href="https://www.linkedin.com" target="_blank" rel="external">
+            <li><i class="fa-brands fa-linkedin"></i></li>
+          </a>
+          <a href="https://www.instagram.com/projeto.solidarizers/" target="_blank" rel="external">
+            <li><i class="fa-brands fa-instagram"></i></li>
+          </a>
+          <a href="https://www.tiktok.com" target="_blank" rel="external">
+            <li><i class="fa-brands fa-tiktok"></i></li>
+          </a>
+          <a href="https://www.x.com" target="_blank" rel="external">
+            <li><i class="fa-brands fa-x-twitter"></i></li>
+          </a>
+          <a href="https://www.facebook.com" target="_blank" rel="external">
+            <li><i class="fa-brands fa-facebook"></i></li>
+          </a>
+        </ul>
+      </section>
+      <section class="rodape__links">
+        <h2 class="rodape__links__titulo">Links Úteis</h2>
+        <ul class="rodape__link_links">
+          <li class="rodape__links__item">
+            <a href="http://">Perguntas Frequentes</a>
+          </li>
+          <li class="rodape__links__item">
+            <a href="http://">Suporte</a>
+          </li>
+          <li class="rodape__links__item">
+            <a href="http://">Politica de Privacidade</a>
+          </li>
+          <li class="rodape__links__item">
+            <a href="http://">Fale Conosco</a>
+          </li>
+        </ul>
+      </section>
+      <section class="rodape__app__link">
+        <h2 class="rodape__titulo">Baixe nosso Aplicativo</h2>
+        <a href="https://play.google.com" class="rodape__app__link" target="_blank" rel="external">
+          <img src="./src/assets/img/icones/google-play.webp" alt="" />
+        </a>
+      </section>
+      <section class="rodape__newsletter">
+        <h2 class="rodape__titulo">Assine nossa Newsletter</h2>
+        <form action="" class="rodape__newsletter__form">
+          <input class="formNewsletter__input" name="emailNewsletter" id="emailNewsletter" type="email" placeholder="E-mail" minlength="4" required />
+          <button class="formNewsletter__btn" id="newsletter" type="submit">
+            Enviar
+          </button>
+        </form>
+      </section>
+    </div>
+  </footer>
+  </section>
+  <section class="cadastro" id="cadastro" aria-label="cadastro">
+    <div class="modal__cadastro" id="modal__cadastro" popover="manual">
+      <button popovertarget="modal__cadastro" popovertargetaction="hide" class="iconFechar">
+        x
+      </button>
+      <h1 class="cadastro__titulo">Cadastre-se</h1>
+      <form class="formCadastro" id="formCadastro" action="/" method="POST" dados-formularioCadastro>
+        <fieldset class="formulario__campo">
+          <label for="nome">Nome</label>
+          <input class="formcadastro__input" name="nome" id="nome" type="name" placeholder="Insira seu nome" minlength="3" required />
+          <span class="mensagem-erro"></span>
+        </fieldset>
+        <fieldset class="formulario__campo">
+          <label for="email">Email</label>
+          <input class="formcadastro__input" name="email" id="email" type="email" placeholder="Insira seu email" minlength="4" required />
+          <span class="mensagem-erro"></span>
+        </fieldset>
+        <fieldset class="formulario__campo">
+          <label for="senha">Senha</label>
+          <input class="formcadastro__input" name="senha" id="senha" type="password" placeholder="Insira sua senha" minlength="6" required />
+          <span class="mensagem-erro"></span>
+        </fieldset>
+        <fieldset class="formulario__campo">
+          <label for="bairro">Bairro</label>
+          <select id="bairro" name="bairro" required>
+            <option value="">Selecione um Bairro</option>
+            <option value="areal">Areal</option>
+            <option value="centro">Centro</option>
+            <option value="fragata">Fragata</option>
+            <option value="laranjal">Laranjal</option>
+            <option value="guabiroba">Guabiroba</option>
+            <option value="porto">Três Vendas</option>
+          </select>
+          <span class="mensagem-erro"></span>
+        </fieldset>
+
+        <button class="formcadastro__botao" id="enviar" type="submit">
+          Continuar
+        </button>
+      </form>
+    </div>
+  </section>
+  <section class="login" id="login" aria-label="login">
+    <div class="modal__login" id="modal__login" popover="manual">
+      <button popovertarget="modal__login" popovertargetaction="hide" class="iconFechar">
+        x
+      </button>
+      <h1 class="login__titulo">Login</h1>
+      <form class="formLogin" id="formLogin" action="/" method="POST" dados-formularioLogin>
+        <fieldset class="formulario__campo"></fieldset>
+        <fieldset class="formulario__campo">
+          <label for="email">Email</label>
+          <input class="formLogin__input" name="email" id="emailLogin" type="email" placeholder="Insira seu email" minlength="4" required />
+          <span class="mensagem-erro"></span>
+        </fieldset>
+        <fieldset class="formulario__campo">
+          <label for="senha">Senha</label>
+          <input class="formLogin__input" name="senha" id="senhaLogin" type="password" placeholder="Insira sua senha" minlength="6" required />
+          <span class="mensagem-erro"></span>
+        </fieldset>
+        <button class="formLogin__botao" id="logar" type="submit">
+          Continuar
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <script type="module" src="./modules/animejs.js"></script>
+  <script type="module" src="./modules/validacoes_form.js"></script>
+  <script type="module" src="./modules/listaOscs_API.js"></script>
+
+</body>
+
+</html>

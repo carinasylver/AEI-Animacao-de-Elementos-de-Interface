@@ -1,0 +1,93 @@
+.rodape {
+  background-color: #030746;
+  /* height: 100vh;*/
+}
+
+.rodape__navegacao {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.rodape__projeto {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.rodape__titulo,
+.rodape__links__titulo{
+  color: #edf7f6;
+  font-weight: 700;
+  margin: 20px;
+}
+
+.rodape__links__item {
+  opacity: 1;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.rodape__texto {
+  margin-bottom: 20px;
+}
+
+.rodape__redes__links {
+  display: flex;
+  opacity: 1;
+}
+
+.rodape__redes__links a i {
+  color: aliceblue;
+  font-size: 20px;
+   opacity: 1;
+}
+
+.rodape__texto {
+  margin-bottom: 20px;
+}
+
+
+.rodape__app__link img {
+  max-width: 150px;
+  margin-left: 20px;
+}
+
+.rodape__projeto p,
+a {
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.rodape__links__item {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  opacity: 1;
+}
+
+.formNewsletter__input {
+  color: white;
+  padding: 10px;
+}
+
+.formNewsletter__btn {
+  padding: 10px;
+}
+
+.rodape__newsletter__form {
+  margin: 20px;
+}
+
+/*tela tablets e maiores*/
+@media (min-width: 600px) {
+  .rodape__navegacao {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .rodape__projeto {
+    max-width: 440px;
+  }
+}
