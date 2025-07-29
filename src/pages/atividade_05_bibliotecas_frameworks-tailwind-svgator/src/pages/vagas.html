@@ -4,30 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!-- tailwind via vite -->
-    <!-- <link rel="stylesheet" href="../assets/styles/style.css" />  -->  
+    <!--icones -> https://fontawesome.com/ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-      <!--icones -> https://fontawesome.com/ -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-        <!-- tailwind cdn -->
-       <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-       <!-- classe customizada via cdn-->
-      <style type="text/tailwindcss">
-      @theme {
-        --color-header: #2b8a86;
-        --color-btnLogin: #f16457;
-      }
-    </style>
+    <!-- tailwind cdn -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <link rel="stylesheet" href="../style.css" />   
   <title>Vagas</title>
 </head>
 <body>
   <div class="grid">
-    <header class="bg-header text-white">
+    <header class="bg-[var(--color-header)] text-white">
         <nav class="m-8 flex flex-wrap justify-around items-center">     
-          <a href="../../index.html" class="flex items-center">                
-            <span class="text-2xl font-semibold">Solidarize</span>
+          <a href="../../index.html" class="flex items-center">  
+            <!-- tailwindcss-animate-->
+            <span class="text-2xl font-semibold animate-wiggle">Solidarize</span>
           </a>          
           <ul class="flex flex-wrap items-center gap-6">
             <li class="flex items-center">
@@ -79,7 +71,7 @@
           
           <div class="flex gap-x-8 items-center">          
             <a href="#" class="w-40 text-center py-3 px-8 hover:bg-gradient-to-br from-[#2b8a86] to-[#21cdc3] rounded-[25px]">Cadastre-se</a>
-            <a href="#" class="w-40 text-center py-3 px-8 hover:bg-btnLogin rounded-[25px] ">Entrar</a>
+            <a href="#" class="w-40 text-center py-3 px-8 hover:bg-[var(--color-btnLogin)] rounded-[25px] ">Entrar</a>
           </div>   
         </nav>
     </header>

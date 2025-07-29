@@ -1,0 +1,20 @@
+:root {
+  --color-header: #2b8a86;
+  --color-btnLogin: #f16457;
+}
+
+/* https://www.tailwindcss-animated.com/configurator.html?animation=wiggle&count=infinite */
+/* https://tailwindcss.com/docs/animation */
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+.animate-wiggle {
+  animation: wiggle 1s ease-in-out infinite;
+}
