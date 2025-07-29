@@ -1,0 +1,18 @@
+{
+  "name": "atividade_06_bibliotecas_frameworks-slides-parallax",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.11",
+    "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "swiper": "^11.2.10"
+  }
+}
