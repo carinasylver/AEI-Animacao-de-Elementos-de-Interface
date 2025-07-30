@@ -12,8 +12,9 @@ const listAtividade = document.querySelector('#listaLinks');
 //console.log(listAtividade)
 
 links.forEach((item,index) => listAtividade.innerHTML += `
-  <li>
-    <a href="/src/pages/${item.path}/index.html">
+  <li class="mb-2 border-l-4 pl-4 border-purple-600">
+    <a href="/src/pages/${item.path}/index.html" class="block py-1 rounded transition duration-200 hover:bg-blue-100 hover:text-blue-600"
+     >
       Atividade ${index+1}: ${item.title}
     </a>
   </li>

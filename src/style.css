@@ -1,10 +1,11 @@
-/*****************************************/
-/* reseta os padroes dos navegadores
-/*****************************************/
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
+@import "tailwindcss";
+
+
+.bg-capa-aei {
+  background-image: url('/img/capa_aei_2025.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 
