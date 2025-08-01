@@ -2,8 +2,8 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import BgCena from '/assets/img/deathStar/bg0.png';
-import DeathStar from '/assets/img/deathStar/death-star.glb?url'; //textura blender
+import BgCena from './assets/img/deathStar/bg0.png';
+import DeathStar from './assets/img/deathStar/death-star.glb?url'; //textura blender
 
 
 /***************criando a cena, câmera e renderizador******/
